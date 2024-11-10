@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const Canvas = require('@napi-rs/canvas');
-var nodeCleanup = require('node-cleanup');
+let nodeCleanup = require('node-cleanup');
 const { token } = require('./config.json');
 const log = require("./src/utils/log.js");
 
@@ -16,7 +16,7 @@ client.cooldowns = new Collection();
 Canvas.GlobalFonts.registerFromPath('./assets/Renogare.ttf', 'Renogare');
 
 //Load command files
-var commands = 0;
+let commands = 0;
 client.commands = new Collection();
 const commandFolder = path.join(__dirname, 'src/commands');
 const commandFiles = fs.readdirSync(commandFolder);
@@ -29,7 +29,7 @@ for (const commandFile of commandFiles) {
 log.start(`Loaded ${commands} commands`);
 
 //Load events
-var events = 0;
+let events = 0;
 const eventsPath = path.join(__dirname, 'src/events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 for (const file of eventFiles) {

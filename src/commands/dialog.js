@@ -2,7 +2,7 @@ const { AttachmentBuilder, SlashCommandBuilder, SlashCommandStringOption, SlashC
 const Canvas = require('@napi-rs/canvas');
 const sizeOf = require("image-size")
 const wait = require('node:timers/promises').setTimeout;
-var CanvasTextWrapper = require('canvas-text-wrapper').CanvasTextWrapper;
+let CanvasTextWrapper = require('canvas-text-wrapper').CanvasTextWrapper;
 const { Users, Guilds } = require("../utils/database.js");
 const { characters } = require("../utils/characters.js");
 const log = require("../utils/log.js");

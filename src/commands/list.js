@@ -6,6 +6,7 @@ const log = require("../utils/log.js");
 const loc = require("../utils/loc.js")
 
 // I love hardcoding stuff and making this bot unbearable to use for other people
+//^ Relatable
 const emojis = new Map;
 emojis.set('badeline_angry', "<:badeline_angry:1278765308261306441>");
 emojis.set('badeline_angryAlt', "<:badeline_angryAlt:1278765318000611479>");

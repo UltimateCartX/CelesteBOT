@@ -19,7 +19,7 @@ module.exports = {
         .setDMPermission(false),
 
     async execute(interaction) {
-        var guild = await Guilds.findOne({ where: { guildId: interaction.guildId } });
+        let guild = await Guilds.findOne({ where: { guildId: interaction.guildId } });
         if (guild === null) { guild = await Guilds.create({ guildId: interaction.guildId, name: interaction.guild.name }) };
         const webhookMode = interaction.options.getBoolean('webhook_mode');
 
